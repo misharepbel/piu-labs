@@ -1,18 +1,37 @@
-/* Minimalny reset  */
 html {
   font-size: 16px; /* bazowy rozmiar czcionki */
-  font-family: system-ui, sans-serif; /* font systemowy */
+  font-family: Consolas, monospace; /* font systemowy */
   line-height: 1.5; /* lepsza czytelność */
 }
 body {
   margin: 1rem;
   padding: 0;
+  background-color: #252935; /* ciemne tło */
+}
+h1 {
+  color: #08c554; /* jasny kolor nagłówka */
+}
+
+header.menu {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 
 a {
   color: #0066cc; /* niebieski kolor linków */
   text-decoration: none; /* bez podkreślenia */
   font-size: 1.4rem;
+}
+a#getback {
+  color: #ffff7a;
+  font-weight: 800;
 }
 a:hover {
   text-decoration: underline; /* podkreślenie przy najechaniu */
