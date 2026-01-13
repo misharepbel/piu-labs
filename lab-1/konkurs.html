@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Konkurs</title>
+    <link rel="stylesheet" href="css/konkurs.css" />
+  </head>
+  <body>
+    <header class="menu">
+      <h1>Michael Tryfanau</h1>
+      <nav>
+        <a id="getback" href="index.html">Strona główna</a>
+        <a href="login.html">Logowanie</a>
+        <a href="uwagi.html">Uwagi</a>
+      </nav>
+    </header>
+    <main>
+      <section id="bigform">
+        <div class="bigform_header">
+          <h2>Zgłoszenie do konkursu plastycznego</h2>
+          <input type="checkbox" name="" id="theme-toggle" hidden />
+          <label for="theme-toggle" class="theme-toggle pointed">🌗</label>
+        </div>
+        <form action="https://httpbin.org/post" method="post">
+          <label for="name">Imię:</label><br />
+          <input
+            type="text"
+            name=""
+            id="name"
+            required
+            maxlength="30"
+            class="maxwidth grayed"
+          /><br />
+          <label for="surname">Nazwisko:</label><br />
+          <input
+            type="text"
+            name=""
+            id="surname"
+            required
+            maxlength="50"
+            class="maxwidth grayed"
+          /><br />
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            name=""
+            id="email"
+            required
+            class="maxwidth grayed"
+          /><br />
+          <label for="city" class="pointed">Miasto:</label><br />
+          <input
+            type="text"
+            name=""
+            id="city"
+            placeholder="Wpisz lub wybierz"
+            list="cities"
+            required
+            class="maxwidth pointed grayed"
+          /><br />
+          <datalist id="cities">
+            <option value="Warszawa"></option>
+            <option value="Kraków"></option>
+            <option value="Gdańsk"></option>
+            <option value="Poznań"></option>
+            <option value="Wrocław"></option>
+          </datalist>
+          <label for="date" class="pointed">Data urodzenia:</label><br />
+          <input
+            type="date"
+            name=""
+            id="date"
+            placeholder="rrrr-mm-dd"
+            required
+            max="2026-01-13"
+            class="maxwidth pointed grayed"
+          />
+          <br />
+          <label for="amount">Liczba zgłaszanych prac (od 1 do 6):</label><br />
+          <input
+            type="number"
+            name=""
+            id="amount"
+            min="1"
+            max="6"
+            required
+            class="maxwidth grayed"
+          /><br />
+          <label for="color">Kolor wiodący prac:</label><br />
+          <input
+            type="color"
+            name=""
+            id="color"
+            value="#ffdd00"
+            required
+            class="maxwidth pointed grayed"
+            style="height: 30px"
+          /><br />
+          <label for="category" class="pointed">Kategoria pracy:</label><br />
+          <select
+            name=""
+            id="category"
+            required
+            class="maxwidth pointed grayed"
+          >
+            <option value="" disabled selected>-- wybierz kategorię --</option>
+            <option value="Rysunek">Rysunek</option>
+            <option value="Malarstwo">Malarstwo</option>
+            <option value="Grafika cyfrowa">Grafika cyfrowa</option></select
+          ><br />
+          <fieldset>
+            <legend>Publikacja pracy online:</legend>
+            <input
+              type="radio"
+              name="pub"
+              id="tak"
+              value="Tak"
+              class="pointed"
+              required
+            />
+            <label for="tak" class="pointed">Tak</label><br />
+            <input
+              type="radio"
+              name="pub"
+              id="nie"
+              value="Nie"
+              class="pointed"
+              required
+            />
+            <label for="nie" class="pointed">Nie</label><br />
+          </fieldset>
+          <input type="checkbox" name="" id="agree" required class="pointed" />
+          <label for="agree" class="pointed"
+            >Zgadzam się na regulamin konkursu</label
+          ><br />
+          <input
+            type="submit"
+            value="Wyślij zgłoszenie"
+            id="send"
+            class="maxwidth pointed"
+          />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
