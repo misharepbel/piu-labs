@@ -1,0 +1,118 @@
+/* Reset stylów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eeeeee;
+}
+main,
+aside {
+  h1,
+  h2,
+  h3,
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  @media (min-width: 1024px) {
+    grid-template-columns: 3fr 1fr;
+    & > *:not(main):not(aside) {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+h1,
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  background-color: #f39c11;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  div {
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 4px;
+    &::before {
+      content: 'Logo';
+      font-weight: 550;
+    }
+  }
+}
+
+nav {
+  background-color: #2780b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 13px;
+  @media (min-width: 1024px) {
+    justify-content: flex-start;
+  }
+}
+
+main {
+  color: #474e59;
+  @media (min-width: 1024px) {
+    padding-right: 10px;
+  }
+}
+
+aside {
+  background-color: #d4efe0;
+  div {
+    display: grid;
+    margin: auto;
+    padding: 10px;
+    width: 80%;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    span {
+      margin: auto;
+      font-size: 1.9rem;
+      @media (min-width: 1024px) {
+        font-size: 2.2rem;
+      }
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: auto auto;
+      height: 60%;
+    }
+  }
+}
+
+footer {
+  background-color: #25ae5e;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 30px;
+  @media (min-width: 1024px) {
+    position: sticky;
+    bottom: 0;
+  }
+}
