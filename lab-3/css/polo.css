@@ -66,6 +66,7 @@ main {
     border: 2px solid var(--blue);
     border-radius: 10px;
     flex-shrink: 0;
+    transition: background 0.3s ease-in-out;
   }
   .info {
     width: min(100%, 300px);
@@ -84,6 +85,10 @@ main {
         font-weight: bold;
         padding: 0.2rem 0.5rem;
         border-radius: 7px;
+        transition: 0.3s ease-out;
+        &:hover {
+          filter: brightness(125%);
+        }
       }
       display: flex;
       justify-content: space-between;
@@ -127,6 +132,7 @@ main {
     width: 30px;
     box-shadow: none;
     aspect-ratio: 1/1;
+    transition: box-shadow 0.3s ease-out;
     &:nth-child(1) {
       background-color: var(--blue);
     }
@@ -146,6 +152,7 @@ main {
     width: 30px;
     text-align: center;
     aspect-ratio: 1/1;
+    transition: 0.3s ease-out;
   }
 }
 
