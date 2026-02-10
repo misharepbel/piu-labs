@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +7,50 @@
   </head>
   <body>
     <h1>Lab 4</h1>
+    <main>
+      <h1>Tablica Kanban</h1>
+      <div class="kanban-board">
+        <div class="column" id="todo">
+          <h2>Do zrobienia</h2>
+          <p class="task-counter">Ilość zadań: 0</p>
+          <div class="tasks">
+            <!-- Dynamically added tasks -->
+          </div>
+          <div class="column-buttons">
+            <button class="add todo">Dodaj kartę</button>
+            <button class="color todo">Koloruj kolumnę</button>
+            <button class="sort todo">Sortuj kolumnę</button>
+          </div>
+        </div>
+        <div class="column" id="doing">
+          <h2>W trakcie</h2>
+          <p class="task-counter">Ilość zadań: 0</p>
+          <div class="tasks">
+            <!-- Dynamically added tasks -->
+          </div>
+          <div class="column-buttons">
+            <button class="add doing">Dodaj kartę</button>
+            <button class="color doing">Koloruj kolumnę</button>
+            <button class="sort doing">Sortuj kolumnę</button>
+          </div>
+        </div>
+
+        <div class="column" id="done">
+          <h2>Zrobione</h2>
+          <p class="task-counter">Ilość zadań: 0</p>
+          <div class="tasks">
+            <!-- Dynamically added tasks -->
+          </div>
+          <div class="column-buttons">
+            <button class="add done">Dodaj kartę</button>
+            <button class="color done">Koloruj kolumnę</button>
+            <button class="sort done">Sortuj kolumnę</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <a href="..">Powrót</a>
+    <script src="js/kanban.js"></script>
   </body>
 </html>
